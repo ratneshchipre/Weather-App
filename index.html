@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="./assets/weather-title.png">
+    <link rel="stylesheet" href="style.css">
+    <title>SkyNow - A Weather App</title>
+</head>
+<body>
+    
+    <header class="header">
+
+        <div class="navbar">
+  
+            <a href="" class="logo">
+
+                <img src="assets/weather-app-main.png" alt="logo" class="navbar-logo">
+                <h1 class="title">SkyNow</h1>
+
+            </a>
+  
+            <div class="location-input">
+
+                <button class="search-icon">
+                <i class='bx bx-search'></i>
+                </button>
+
+                <input class="search-input" type="text" placeholder="Search loaction here...">
+
+            </div>
+  
+            <div class="current-location">
+
+                <button class="current-button">
+                <i class='bx bx-current-location'></i>
+                <p class="current-txt">Current Location</p>
+                </button>
+
+            </div>
+  
+        </div>
+
+    </header>
+  
+    <main class="main hidden">
+
+        <div class="content">
+
+            <div class="today-report">
+
+                <h2 class="card-title">Today's overview</h2>
+
+                <div class="today-details">
+
+                    <p class="today-weather-txt">20&deg; c</p>
+                    <img src="./assets/weather_icons/clear.png" alt="" class="today-img">
+
+                </div>
+
+                <p class="today-cloud-details">Broken Cloud</p>
+                <hr>
+
+                <div class="today-location-date">
+
+                    <div class="date">
+
+                        <i class='bx bx-calendar-alt date-loc-icon' style='color:#ffffff'></i>
+                        <p class="today-date">Wednesday 1, Mar</p>
+
+                    </div>
+                    
+                    <div class="location">
+
+                        <i class="fa-solid fa-location-dot date-loc-icon"></i>
+                        <p class="today-location">London</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="highlights-txt">
+                <p>Today's highlights</p>
+            </div>
+
+            <div class="highlights-container">
+
+                <div class="highlights-air-index">
+
+                    <p class="air-txt">Air Quality Index</p>
+
+                    <img src="./assets/air-sign.png" alt="wind" class="air-img">
+
+                    <div class="aqi-index">
+
+                        <p class="index-num">73</p>
+                        <p>AQI</p>
+
+                    </div>
+
+                    <div class="aqi-more-info">
+
+                        <p class="pm-txt">PM2.5 : 36</p>
+                        <p class="so2-txt">SO2 : 7.75</p>
+
+                    </div>
+
+                </div>
+
+                <div class="highlights-sun-rise-set">
+
+                    <p class="sun-txt">Sunrise & Sunset</p>
+
+                    <div class="sun-rise-set-img">
+
+                        <img src="./assets/sunrise-img.png" alt="sunrise" class="sun-img">
+                        <img src="./assets/sunset-img.png" alt="sunset" class="sun-img">
+
+                    </div>
+
+                    <div class="sunrise">
+
+                        <p class="sunrise-txt">Sunrise</p>
+                        <p class="sunrise-time">7 : 00 AM</p>
+
+                    </div>
+
+                    <div class="sunset">
+
+                        <p class="sunset-txt">Sunset</p>
+                        <p class="sunset-time">7 : 00 PM</p>
+
+                    </div>
+
+                </div>
+
+                <div class="highlights-humidity">
+
+                    <p class="humidity-txt">Humidity</p>
+
+                    <img src="./assets/humidity-img.png" alt="humidity" class="humidity-img">
+
+                    <div class="humidity-info">
+                        <p class="humidity-percent">89&percnt;</p>
+                        <p class="condition-txt">Normal</p>
+                    </div>
+
+                </div>
+
+                <div class="highlights-pressure">
+
+                    <p class="pressure-txt">Pressure</p>
+
+                    <img src="./assets/presssure-img.png" alt="pressure" class="pressure-img">
+
+                    <div class="pressure-info">
+                        <p class="pressure-value">1025</p>
+                        <p class="pressure-unit">hPa</p>
+                    </div>
+
+                </div>
+
+                <div class="highlights-wind-speed">
+
+                    <p class="wind-txt">Wind Speed</p>
+
+                    <img src="./assets/wind-speed.png" alt="wind" class="wind-img">
+
+                    <div class="wind-info">
+                        <p class="wind-value"><span>5</span> km/h</p>
+                    </div>
+
+                </div>
+
+                <div class="highlights-visibility">
+
+                    <p class="visibility-txt">Visibility</p>
+
+                    <img src="./assets/visibility-img.png" alt="visibility" class="visibility-img">
+
+                    <div class="visibility-info">
+                        <p class="visibility-value"><span>50</span> km</p>
+                    </div>
+
+                </div>
+
+                <div class="highlights-feels-like">
+
+                    <p class="feels-like-txt">Feels Like</p>
+
+                    <img src="./assets/feels-img.png" class="feels-like-img">
+
+                    <div class="feels-info">
+                        <p class="feels-value">50&deg; c</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="day-5-txt">
+                <p>5 Days Forecast</p>
+            </div>
+
+            <div class="day-5-report">
+
+                <div class="day-1-info">
+
+                    <img src="./assets/weather_icons/clear.png" class="day-1-img">
+
+                    <p class="day-1-value">7&deg;</p>
+
+                    <div class="day-date-1">
+                        <p class="day-1-date">2 Mar</p>
+                        <p class="day-1-day">Thursday</p>
+                    </div>
+
+                </div>
+
+                <div class="day-2-info">
+
+                    <img src="./assets/weather_icons/snow.png" class="day-2-img">
+
+                    <p class="day-2-value">7&deg;</p>
+
+                    <div class="day-date-2">
+                        <p class="day-2-date">3 Mar</p>
+                        <p class="day-2-day">Friday</p>
+                    </div>
+
+                </div>
+
+                <div class="day-3-info">
+
+                    <img src="./assets/weather_icons/drizzle.png" class="day-3-img">
+
+                    <p class="day-3-value">6&deg;</p>
+
+                    <div class="day-date-3">
+                        <p class="day-3-date">4 Mar</p>
+                        <p class="day-3-day">Saturday</p>
+                    </div>
+
+                </div>
+                
+                <div class="day-4-info">
+
+                    <img src="./assets/weather_icons/haze.png" class="day-4-img">
+
+                    <p class="day-4-value">8&deg;</p>
+
+                    <div class="day-date-4">
+                        <p class="day-4-date">5 Mar</p>
+                        <p class="day-4-day">Sunday</p>
+                    </div>
+
+                </div>
+
+                <div class="day-5-info">
+
+                    <img src="./assets/weather_icons/clear.png" class="day-5-img">
+
+                    <p class="day-5-value">5&deg;</p>
+
+                    <div class="day-date-5">
+                        <p class="day-5-date">6 Mar</p>
+                        <p class="day-5-day">Monday</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="hourly-txt">
+                <p>Today at</p>
+            </div>
+
+            <div class="hourly-report-container">
+
+                <div class="condition">
+
+                    <div class="report-1">
+    
+                        <p class="report-1-time">9 AM</p>
+                        <img src="./assets/weather_icons/clear.png" class="report-1-img">
+                        <p class="report-1-value">5&deg;</p>
+    
+                    </div>
+    
+                    <div class="report-2">
+    
+                        <p class="report-2-time">9 AM</p>
+                        <img src="./assets/weather_icons/clear.png" class="report-2-img">
+                        <p class="report-2-value">5&deg;</p>
+                        
+                    </div>
+    
+                    <div class="report-3">
+    
+                        <p class="report-3-time">9 AM</p>
+                        <img src="./assets/weather_icons/clear.png" class="report-3-img">
+                        <p class="report-3-value">5&deg;</p>
+    
+                    </div>
+    
+                    <div class="report-4">
+    
+                        <p class="report-4-time">9 AM</p>
+                        <img src="./assets/weather_icons/clear.png" class="report-4-img">
+                        <p class="report-4-value">5&deg;</p>
+    
+                    </div>
+                    
+                </div>
+
+                <div class="direction">
+
+                    <div class="report-5">
+    
+                        <p class="report-5-time" id="report-time">9 AM</p>
+                        <img src="./assets/weather_icons/direction.png" class="report-5-img">
+                        <p class="report-5-value"  id="report-wind">5 km/h</p>
+    
+                    </div>
+    
+                    <div class="report-6">
+    
+                        <p class="report-6-time" id="report-time">9 AM</p>
+                        <img src="./assets/weather_icons/direction.png" class="report-6-img">
+                        <p class="report-6-value"  id="report-wind">5 km/h</p>
+    
+                    </div>
+    
+                    <div class="report-7">
+    
+                        <p class="report-7-time" id="report-time">9 AM</p>
+                        <img src="./assets/weather_icons/direction.png" class="report-7-img">
+                        <p class="report-7-value"  id="report-wind">5 km/h</p>
+    
+                    </div>
+    
+                    <div class="report-8">
+    
+                        <p class="report-8-time" id="report-time">9 AM</p>
+                        <img src="./assets/weather_icons/direction.png" class="report-8-img">
+                        <p class="report-8-value"  id="report-wind">5 km/h</p>
+    
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        
+    </main>
+
+    <section class="search-city-sec section-msg hidden">
+
+        <img src="./assets/search-city.png" alt="search-img">
+
+        <div class="msg-txt">
+
+            <p>Search Location</p>
+
+        </div> 
+
+    </section>
+
+    <section class="not-found-sec section-msg hidden">
+
+        <img src="./assets/not-found.png" alt="search-img">
+
+        <div class="msg-txt">
+
+            <p>Oops! Location Not Found, try searching again!</p>
+
+        </div> 
+
+    </section>
+  
+    <footer>
+  
+        <div class="footer hidden">
+  
+            <p class="copyright">Copyright &#169; 2024. All rights reserved | Made by <span class="my-name">Ratnesh Chipre</span></p>
+
+            <p class="connect">Find me on :<br>
+
+                <span class="connect-links">
+    
+                    <a href="https://www.linkedin.com/in/ratneshchipre" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin" id="linked-in"></i></a>
+        
+                    <a href="https://github.com/ratneshchipre" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" id="github"></i></a>
+                    
+                    <a href="https://x.com/ratneshchipre" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter" id="twitter"></i></a>
+    
+                </span>
+                
+            </p>
+  
+        </div>
+
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
