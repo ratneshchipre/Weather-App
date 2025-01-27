@@ -710,6 +710,27 @@ hr {
     top: 18.5rem;
     left: 34rem;
     gap: 1.5rem;
+    overflow-x: scroll;
+    padding-bottom: 1rem;
+}
+
+.hourly-report-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.hourly-report-container::-webkit-scrollbar-track {
+    background: #1a1a1a; 
+    border-radius: 0.5rem;
+}
+
+.hourly-report-container::-webkit-scrollbar-thumb {
+    background: var(--button-color);
+    border-radius: 0.5rem; 
+    border: 2px solid #1a1a1a;
+}
+
+.hourly-report-container::-webkit-scrollbar:horizontal {
+    height: 0.7rem;
 }
 
 .report-1-img, .report-2-img, .report-3-img, .report-4-img, .report-5-img, .report-6-img, .report-7-img, .report-8-img{
@@ -1189,12 +1210,12 @@ hr {
 
     .hourly-txt {
         margin-left: 31.5rem;
-        margin-top: -7rem;
+        margin-top: 0rem;
     }
 
     .hourly-report-container {
         left: 31.5rem;
-        margin-top: -22rem;
+        margin-top: -15rem;
     }
 
     .hidden {
